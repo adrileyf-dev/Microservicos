@@ -8,7 +8,7 @@ Com um percurso profissional que se estende por mais de 30 anos, acumulei uma va
 
 ## Sobre Esse projeto:
 
-Versões: Java 11 e Spring Boot 2.3.4! Feign, Ribbon, Hystrix, OAuth, JWT, Eureka, API Gateway Zuul
+Versões: Java 11 e Spring Boot 2.3.4 Feign, Ribbon, Hystrix, OAuth, JWT, Eureka, API Gateway Zuul, Docker
 
 ## Conecte-se comigo:
 
