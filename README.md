@@ -25,3 +25,5 @@ Versões: Java 11 e Spring Boot 2.3.4 Feign, Ribbon, Hystrix, OAuth, JWT, Eureka
 ![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
 ![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Kafka](https://img.shields.io/badge/Kafka-231F20?style=for-the-badge&logo=apache-kafka&logoColor=white)
+![Zookeeper](https://img.shields.io/badge/Zookeeper-FFCA28?style=for-the-badge&logo=apache-zookeeper&logoColor=black)
