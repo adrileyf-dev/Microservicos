@@ -13,23 +13,29 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>Config-Server</name>
     <description>Config-Server</description>
-    <url/>
-    <licenses>
-        <license/>
-    </licenses>
-    <developers>
-        <developer/>
-    </developers>
-    <scm>
-        <connection/>
-        <developerConnection/>
-        <tag/>
-        <url/>
-    </scm>
     <properties>
         <java.version>11</java.version>
-        <spring-cloud.version>Hoxton.SR8</spring-cloud.version> <!-- Compatível com Spring Boot 2.3.4.RELEASE -->
+        <spring-cloud.version>Hoxton.SR8</spring-cloud.version>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-config-server</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.junit.vintage</groupId>
+                    <artifactId>junit-vintage-engine</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
 
     <dependencyManagement>
         <dependencies>
@@ -43,39 +49,6 @@
         </dependencies>
     </dependencyManagement>
 
-    <dependencies>
-        <!-- Dependências do projeto -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-config-server -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-config-server</artifactId>
-            <version>4.1.3</version>
-        </dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.cloud</groupId>-->
-<!--            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>-->
-<!--        </dependency>-->
-        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-zuul -->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.cloud</groupId>-->
-<!--            <artifactId>spring-cloud-starter-netflix-zuul</artifactId>-->
-<!--            <version>2.2.10.RELEASE</version>-->
-<!--        </dependency>-->
-
-        <!--        <dependency>-->
-        <!--            <groupId>org.springframework.cloud</groupId>-->
-        <!--            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>-->
-        <!--        </dependency>-->
-        <!--        <dependency>-->
-        <!--            <groupId>org.glassfish.jaxb</groupId>-->
-        <!--            <artifactId>jaxb-runtime</artifactId>-->
-        <!--        </dependency>-->
-    </dependencies>
-
     <build>
         <plugins>
             <plugin>
@@ -84,4 +57,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>
