@@ -10,11 +10,11 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity
 @Data
-@Table(name = "tb_roles")
+@Table(name = "tb_role")
 public class Role {
     @Id
    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String rolename;
+    private String roleName;
 
 }

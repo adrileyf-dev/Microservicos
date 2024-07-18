@@ -15,18 +15,18 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "tb_users")
+@Table(name = "tb_user")
 public class Users {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String email;
+    private String email; 
     private String password;
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "tb_user_role",
            joinColumns = @JoinColumn(name = "user_id"),
-           inverseJoinColumns = @JoinColumn(name = "roler_id"))
+           inverseJoinColumns = @JoinColumn(name = "role_id"))
 
     @Getter
     private Set<Role> roles = new HashSet<>();
