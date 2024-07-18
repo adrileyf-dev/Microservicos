@@ -1,9 +1,9 @@
-package com.example.microservico.resources;
+package com.example.worker.resources;
 
-import com.example.microservico.entities.Worker;
-import com.example.microservico.repositories.WorkRepository;
-import lombok.AllArgsConstructor;
-import lombok.extern.log4j.Log4j2;
+import com.example.worker.entities.Worker;
+import com.example.worker.repositories.WorkRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
@@ -16,11 +16,11 @@ import java.util.List;
 
 @RestController
 
-@Log4j2
 
 @RequestMapping(value = "/workers")
 
 public class WorkerResource {
+    private static Logger logger = LoggerFactory.getLogger(WorkerResource.class);
     @Value("${worker.config}")
     private String testConfig;
 
@@ -36,7 +36,7 @@ public class WorkerResource {
 
     @GetMapping(value = "configs")
     public ResponseEntity<Void> getConfigs() {
-         log.info("CONFIG " + testConfig);
+        logger.info("CONFIG = " + testConfig);
 
         return ResponseEntity.noContent().build();
     }

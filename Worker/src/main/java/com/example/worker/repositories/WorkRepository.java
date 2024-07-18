@@ -1,6 +1,6 @@
-package com.example.microservico.repositories;
+package com.example.worker.repositories;
 
-import com.example.microservico.entities.Worker;
+import com.example.worker.entities.Worker;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 

@@ -1,4 +1,4 @@
-package com.example.microservico.entities;
+package com.example.worker.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
