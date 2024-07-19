@@ -21,7 +21,8 @@ public class Users {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String email; 
+    @Column(unique = true)
+    private String email;
     private String password;
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "tb_user_role",
