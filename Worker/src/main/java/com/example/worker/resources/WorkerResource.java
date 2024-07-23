@@ -20,14 +20,8 @@ import java.util.List;
 @RequestMapping(value = "/workers")
 
 public class WorkerResource {
-    private static Logger logger = LoggerFactory.getLogger(WorkerResource.class);
-    @Value("${worker.config}")
-    private String testConfig;
-
      @Autowired
      WorkRepository workRepository;
-
-
     @GetMapping
     public ResponseEntity<List<Worker>> findAll() {
         List<Worker> workerList = workRepository.findAll();
@@ -36,22 +30,12 @@ public class WorkerResource {
 
     @GetMapping(value = "configs")
     public ResponseEntity<Void> getConfigs() {
-        logger.info("CONFIG = " + testConfig);
-
         return ResponseEntity.noContent().build();
     }
-
-    @GetMapping(value = "/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<Worker> findById(@PathVariable Long id) {
-//
-//        try{ Thread.sleep(3000L);
-//
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-
-    //    log.info("Porta = " + env.getProperty("local.server.port"));
-        Worker worker = workRepository.findById(id).get();
+        Worker worker = workRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Worker not found"));
         return ResponseEntity.ok(worker);
     }
 }
